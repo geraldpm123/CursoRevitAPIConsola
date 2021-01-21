@@ -101,6 +101,7 @@ namespace CursoRevitAPIConsola
             #endregion
 
             #region Funciones
+            /*
             double[] vector = { 1, 2, 3 };
             string[] valor4s = { "gg", "hh" };
 
@@ -118,7 +119,32 @@ namespace CursoRevitAPIConsola
             {
                 return num1 + num2;
             }
+            */
             #endregion
+
+            #region Objetos
+            //Instanciar objeto de la clase Vehiculo
+            Vehiculo autoVerde = new Vehiculo(1600);
+            Vehiculo camionAzul = new Vehiculo(2000);
+            Vehiculo motoNaranja = new Vehiculo(600);
+
+            //Lista de objetos
+            List<Vehiculo> vehiculos = new List<Vehiculo>();
+            vehiculos.Add(autoVerde);
+            vehiculos.Add(camionAzul);
+            vehiculos.Add(motoNaranja);
+
+            camionAzul.Arrancar();
+            camionAzul.Frenar();
+            //Console.WriteLine(autoVerde.motor);
+
+            //Instanciar objeto de la clase Viga
+            //Viga viga1 = new Viga(0.6, 3, "concreto 210");
+
+            int numeroVigas = Viga.ContarLasVigasExistentes();
+            Console.WriteLine(numeroVigas);
+            #endregion
+
         }
     }
 }
